@@ -1,0 +1,17 @@
+def advent_code_2(A):
+    N = len(A)
+    sums = []
+    
+    for i in range(N-2):
+        three_sum = int(A[i]) + int(A[i+1]) + int(A[i+2])
+        sums.append(three_sum)
+        
+    count = []
+    M = len(sums)
+    for j in range(M-1):
+        if sums[j] < sums[j+1]:
+            count.append('1')
+    
+    return len(count)
+
+print(advent_code_2(depths_list))
